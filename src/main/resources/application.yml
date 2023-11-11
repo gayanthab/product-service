@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: product_db
+#       username: myuser
+#       password: mypassword
+
+jwt:
+  secret: yourSecretKey
+  expirationMs: 3600000
+
+
