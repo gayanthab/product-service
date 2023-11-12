@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the JAR file into the container at /app
-COPY build/libs/product-service-1.0-SNAPSHOT.jar /app/your-spring-boot-app.jar
+COPY build/libs/product-service-1.0-SNAPSHOT.jar /app/product-service-1.0-SNAPSHOT.jar
 
 # Specify the command to run on container start
 CMD ["java", "-jar", "product-service-1.0-SNAPSHOT.jar"]
