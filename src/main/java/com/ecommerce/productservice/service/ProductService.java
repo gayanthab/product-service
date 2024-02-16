@@ -1,9 +1,10 @@
 package com.ecommerce.productservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
+//import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -11,22 +12,33 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import com.ecommerce.productservice.model.Product;
-import com.ecommerce.productservice.repository.ProductRepository;
+//import com.ecommerce.productservice.repository.ProductRepository;
 
 @Service
 public class ProductService {
-    private final ProductRepository productRepository;
+   // private final ProductRepository productRepository;
 
-    @Autowired
-    public ProductService(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+    private List<Product> productList = new ArrayList<Product>();
+
+
+  //  @Autowired
+  //  public ProductService(ProductRepository productRepository) {
+  //      this.productRepository = productRepository;
+   // }
+
+
+    public ProductService() {
+         this.productList.add(new Product("id1","name1","des1",11.0));
+        this.productList.add(new Product("id2","name2","des1",12.0));
+        this.productList.add(new Product("id3","name3","des1",13.0));
+     }
 
     public List<Product> getAllProducts() {
-        return productRepository.findAll();
+ //       return productRepository.findAll();
+        return this.productList;
     }
 
-    public Optional<Product> getProductById(String productId) {
+   /* public Optional<Product> getProductById(String productId) {
 
         return productRepository.findById(productId);
     }
@@ -89,5 +101,5 @@ public class ProductService {
     public List<Product> getProductByName(String productName, Pageable pageable){
         return productRepository.findByName(productName,pageable);
     }
-
+*/
 }

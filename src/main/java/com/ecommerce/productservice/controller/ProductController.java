@@ -1,8 +1,8 @@
 package com.ecommerce.productservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+//import org.springframework.data.domain.PageRequest;
+//import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +28,7 @@ public class ProductController {
         List<Product> products = productService.getAllProducts();
         return ResponseEntity.ok(products);
     }
-
+/*
     @GetMapping("/{productId}")
     public ResponseEntity<Product> getProduct(@PathVariable String productId) {
         Optional<Product> productOptional = productService.getProductById(productId);
@@ -84,4 +84,6 @@ public class ProductController {
 
             return ResponseEntity.ok(filteredProduct);
     }
+
+ */
 }

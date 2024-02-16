@@ -1,4 +1,4 @@
-package com.ecommerce.productservice.repository;
+/*package com.ecommerce.productservice.repository;
 
 import com.ecommerce.productservice.model.Product;
 import org.springframework.data.domain.Pageable;
@@ -10,3 +10,4 @@ public interface ProductRepository extends MongoRepository<Product,String> {
 
     List<Product> findByName(String name, Pageable pageable);
 }
+*/
