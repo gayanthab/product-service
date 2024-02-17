@@ -11,4 +11,7 @@ jwt:
   secret: yourSecretKey
   expirationMs: 3600000
 
+server:
+  port: 8081
+
 
